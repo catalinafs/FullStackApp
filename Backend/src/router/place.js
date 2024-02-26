@@ -1,9 +1,10 @@
 const express = require('express');
+const { createPlace } = require('../controllers/place');
 
 module.exports = (app) => {
     const router = express.Router();
-    app.use('/place')
+    app.use('/place');
 
     //? POST
-    router.post('/create', (req, res) => { res.send('holis') });
+    router.post('/create', createPlace);
 }
