@@ -7,11 +7,17 @@ const dotenv = require('dotenv');
 dotenv.config();
 const config = require('./config');
 
+// Routes
+const userAPI = require('./router/user');
+
 // Constants
 const app = express();
 
-// App USe
+// App Use
 app.use(bodyParser.json());
+
+// App Routes
+userAPI(app);
 
 // Listening app
 app.listen(config.port, () => {
