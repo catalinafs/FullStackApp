@@ -1,22 +1,23 @@
 module.exports = (sequelize, DataType) => {
-    const Visit = sequelize.define('visit', {
+    const Visit = sequelize.define('Visit', {
         id: {
-            type: DataType.INTEGER,
-            allowNull: false,
+            type: DataType.BIGINT(20),
             primaryKey: true,
+            autoIncrement: true,
         },
         id_user: {
-            type: DataType.INTEGER,
+            type: DataType.BIGINT(20),
             allowNull: false,
         },
         id_place: {
-            type: DataType.INTEGER,
+            type: DataType.BIGINT(20),
             allowNull: false,
         },
     },
         {
             updatedAt: false,
             freezeTableName: true,
+            tableName: 'visit',
         }
     );
 

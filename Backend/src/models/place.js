@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataType) => {
-    const Place = sequelize.define('place', {
+    const Place = sequelize.define('Place', {
         id: {
             type: DataType.BIGINT(20),
             primaryKey: true,
@@ -22,7 +22,7 @@ module.exports = (sequelize, DataType) => {
             allowNull: false,
         },
         state: {
-            type: DataType.TINYINIT(4),
+            type: DataType.TINYINT(4),
             defaultValue: 1,
         },
     },
@@ -30,6 +30,7 @@ module.exports = (sequelize, DataType) => {
             updatedAt: false,
             createdAt: false,
             freezeTableName: true,
+            tableName: 'place',
         }
     );
 

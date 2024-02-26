@@ -15,6 +15,7 @@ const sequelize = new Sequelize(dbName, dbUser, dbPassword, {
     dialect: 'mysql',
     port: dbPort,
     host: dbHost,
+    logging: false,
 });
 
 const listFile = fs.readdirSync(__dirname).filter((file) => {
