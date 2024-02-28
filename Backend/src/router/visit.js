@@ -3,7 +3,7 @@ const { createVisit, getUsersFromPlace, getPlacesFromUser } = require('../contro
 
 module.exports = (app) => {
     const router = express.Router();
-    app.use('/visit');
+    app.use('/visit', router);
 
     //? POST
     router.post('/create', createVisit);
